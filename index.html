@@ -1,0 +1,2826 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecole Bison Ouragan Club Anakochi Ju Jitsu Self Defense -
+            Accueil</title>
+        <link rel="icon" type="image/x-icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥋</text></svg>">
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+        <style>
+        /* ===== VARIABLES CSS ===== */
+:root {
+    --primary-color: #d4af37;
+    --primary-dark: #b8941f;
+    --secondary-color: #222;
+    --text-color: #333;
+    --light-bg: #f8f8f8;
+    --white: #ffffff;
+    --gray: #666;
+    --light-gray: #ddd;
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: var(--transition);
+}
+
+.header.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-menu a:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover:after {
+    width: 100%;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.cta-button {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: 2px solid var(--white);
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--text-color);
+}
+
+/* ===== SECTIONS COMMUNES ===== */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== SECTION À PROPOS ===== */
+.about {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-content h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-content h3 i {
+    font-size: 1.2rem;
+    width: 30px;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s;
+}
+
+.about-image:hover img {
+    transform: scale(1.1);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.stat-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* ===== SECTION COURS ===== */
+.classes {
+    padding: 5rem 2rem;
+    background: var(--white);
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+.class-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.class-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.class-card:hover::before {
+    width: 100%;
+    opacity: 0.08;
+}
+
+.class-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.class-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    z-index: 1;
+    position: relative;
+}
+
+.class-card h3 {
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.class-card p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.price-tag {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+/* ===== SECTION INSTRUCTEURS ===== */
+.instructors {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+
+.instructor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.instructor-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.instructor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.instructor-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+}
+
+.instructor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.instructor-card h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.instructor-rank {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    color: #888;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* ===== BOUTON RETOUR EN HAUT ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* ===== RÉSEAUX SOCIAUX FIXES ===== */
+.fixed-social {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 998;
+}
+
+.fixed-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-social a.facebook {
+    background: #1877F2;
+}
+
+.fixed-social a.tiktok {
+    background: #000000;
+}
+
+.fixed-social a.whatsapp {
+    background: #25D366;
+}
+
+.fixed-social a.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.fixed-social a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== MODAL ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: translateY(50px);
+    transition: transform 0.3s;
+}
+
+.modal.visible .modal-content {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gray);
+}
+
+/* ===== LOADER ===== */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    border-top: 5px solid var(--primary-color);
+    animation: spin 1s linear infinite;
+}
+
+.loader-text {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== MENU MOBILE ===== */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ===== AMÉLIORATIONS TACTILES ===== */
+@media (hover: none) {
+    .gallery-info {
+        transform: translateY(0);
+        position: relative;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .gallery-item:hover img {
+        transform: none;
+    }
+
+    .class-card:before {
+        width: 100%;
+        opacity: 0.1;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .cta-button {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+
+    .nav-menu a,
+    .gallery-filter,
+    .accordion-header {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        touch-action: manipulation;
+    }
+
+    .class-card:hover,
+    .instructor-card:hover,
+    .testimonial-card:hover {
+        transform: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .fixed-social a:hover,
+    .back-to-top:hover {
+        transform: none;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        transform: none;
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .about-grid,
+    .contact-grid {
+        gap: 2rem;
+    }
+
+    .fixed-social {
+        right: 15px;
+    }
+
+    .fixed-social a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background: rgba(20, 20, 20, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        gap: 2rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 250px;
+        text-align: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        padding: 0 1rem;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 300px;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .fixed-social {
+        flex-direction: row;
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .fixed-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .back-to-top {
+        bottom: 85px;
+        right: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        width: 280px;
+        min-height: 50px;
+        touch-action: manipulation;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-item {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .classes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .class-card,
+    .instructor-card,
+    .testimonial-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .class-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .price-tag {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        margin: 0.8rem 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-section h3:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .fixed-social {
+        bottom: 15px;
+        gap: 12px;
+    }
+
+    .fixed-social a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 85px;
+        right: 15px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery-item {
+        height: 280px;
+    }
+
+    .gallery-info {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .gallery-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .member-badges {
+        gap: 0.3rem;
+        margin-top: 0.8rem;
+    }
+
+    .member-badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .accordion-item {
+        margin-bottom: 0.8rem;
+    }
+
+    .accordion-header {
+        padding: 1.2rem;
+        font-size: 0.95rem;
+        min-height: 50px;
+    }
+
+    .accordion-content {
+        font-size: 0.9rem;
+    }
+
+    .accordion-content.active {
+        padding: 1.2rem;
+    }
+
+    .nav-menu {
+        padding-top: 80px;
+    }
+
+    .nav-menu a {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fixed-social {
+        gap: 10px;
+    }
+
+    .fixed-social a {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 200px;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .gallery-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-filter {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stagger-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 4rem 0;
+    }
+}
+
+
+
+.instructor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.instructor-card h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.instructor-rank {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* ===== SECTION GALERIE ===== */
+.gallery {
+    padding: 5rem 2rem;
+    background: var(--white);
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-filter {
+    padding: 0.5rem 1.5rem;
+    background: var(--light-bg);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gallery-filter.active,
+.gallery-filter:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Gallery mobile interactions */
+.gallery-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+/* Desktop hover effects */
+@media (hover: hover) and (pointer: fine) {
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .gallery-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+        color: var(--white);
+        transform: translateY(100%);
+        transition: transform 0.3s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .gallery-item:hover .gallery-info {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Mobile/touch interactions */
+@media (hover: none) {
+    .gallery-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+        color: var(--white);
+        transform: translateY(100%);
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+    }
+
+    .gallery-item.show-info .gallery-info {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .gallery-item.show-info::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 5;
+    }
+}
+
+.gallery-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.gallery-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.member-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.member-badge {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.3rem 0.7rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* ===== SECTION TÉMOIGNAGES ===== */
+.testimonials {
+    padding: 5rem 2rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    position: relative;
+}
+
+.testimonials:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><rect fill="%23000" width="100" height="100"/><path d="M0 0h100v100H0z" fill="%23222" opacity=".2"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.1;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card:before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 5rem;
+    color: var(--primary-color);
+    opacity: 0.2;
+    font-family: Georgia, serif;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rating {
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+}
+
+/* ===== SECTION FAQ ===== */
+.faq {
+    padding: 5rem 2rem;
+    background: var(--white);
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-content.active {
+    padding: 1.5rem;
+    max-height: 300px;
+}
+
+/* ===== SECTION CONTACT ===== */
+.contact {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    width: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    padding: 1rem;
+    border: 2px solid var(--light-gray);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.map-container {
+    margin-top: 3rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 400px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 3rem 2rem 1rem;
+    text-align: center;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+    </style>
+    </head>
+    <body>
+        <!-- Loader -->
+        <div class="loader">
+            <div class="loader-text">
+                <img src="logo anakochi.png" alt="Logo Anakochi">
+            </div>
+            <div class="loader-spinner"></div>
+            <div class="loader-progress">
+                <div class="loader-progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- Fixed social icons -->
+        <div class="fixed-social">
+            <a href="#" class="facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="tiktok" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="#" class="whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-fist-raised"></i>Anakochi Bison O.
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#apropos">À Propos</a></li>
+                    <li><a href="#cours">Cours</a></li>
+                    <li><a href="#instructeurs">Instructeurs</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="mobile-cta" style="display: none">
+                        <a href="#contact" class="cta-button">Cours d'essai
+                            gratuit</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="cta-button">Cours d'essai gratuit</a>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Section Hero -->
+        <section id="accueil" class="hero">
+            <div class="hero-content">
+                <h1 class="animate__animated animate__fadeInDown">
+                    Maîtrisez l'Art du Jiu Jitsu
+                </h1>
+                <p class="animate__animated animate__fadeInUp">
+                    Découvrez une discipline qui allie technique, stratégie et
+                    développement personnel dans un environnement bienveillant
+                    et professionnel.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact"
+                        class="btn-primary animate__animated animate__fadeInUp">
+                        Commencer maintenant
+                    </a>
+                    <a href="#cours"
+                        class="btn-secondary animate__animated animate__fadeInUp">
+                        Découvrir nos cours
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section À Propos -->
+        <section id="apropos" class="about">
+            <div class="container">
+                <h2 class="section-title">Pourquoi Choisir Notre Dojo ?</h2>
+                <p class="section-subtitle">
+                    Une approche unique qui privilégie la technique, le respect
+                    et l'épanouissement personnel à travers l'art martial
+                </p>
+
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h3><i class="fas fa-medal"></i> Excellence
+                            Technique</h3>
+                        <p>
+                            Notre programme d'enseignement suit la lignée
+                            traditionnelle du Jiu Jitsu Self Défense, avec une
+                            progression structurée
+                            adaptée à tous les niveaux.
+                        </p>
+
+                        <h3><i class="fas fa-heart"></i> Environnement
+                            Bienveillant</h3>
+                        <p>
+                            Nous cultivons un esprit de famille où chaque
+                            pratiquant peut évoluer à son rythme dans le respect
+                            mutuel et
+                            l'entraide.
+                        </p>
+
+                        <h3><i class="fas fa-chart-line"></i> Développement
+                            Complet</h3>
+                        <p>
+                            Au-delà de la technique, nous développons la
+                            confiance en soi, la discipline et la gestion du
+                            stress à travers la
+                            pratique.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="logo anakochi.png" alt="Logo Anakochi">
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">Années d'expérience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Élèves satisfaits</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="12">0</div>
+                        <div class="stat-label">Ceintures noires</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="98">0</div>
+                        <div class="stat-label">% de recommandation</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Cours -->
+        <section id="cours" class="classes">
+            <div class="container">
+                <h2 class="section-title">Nos Cours</h2>
+                <p class="section-subtitle">
+                    Des programmes adaptés à tous les âges et tous les niveaux
+                </p>
+
+                <div class="classes-grid">
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3>Jiu Jitsu Enfants</h3>
+                        <p>
+                            Cours destinés aux enfants de 6 à 12 ans, axés sur
+                            la
+                            motricité, la discipline, le respect et la confiance
+                            en soi,
+                            dans un cadre ludique et éducatif.
+                        </p>
+                        <div class="price-tag">Frais d'inscription : 5 000 F
+                            CFA</div>
+                        <div class="price-tag">Mensualité : à convenir en
+                            privé</div>
+                        <a href="#contact" class="btn-primary">Inscrire mon
+                            enfant</a>
+                    </div>
+
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Débutants Adultes</h3>
+                        <p>
+                            Programme d'initiation pour adultes sans expérience,
+                            offrant un apprentissage progressif des bases du Jiu
+                            Jitsu
+                            et une remise en forme accessible à tous.
+                        </p>
+                        <div class="price-tag">Frais d'inscription : 5 000 F
+                            CFA</div>
+                        <div class="price-tag">Mensualité : à convenir en
+                            privé</div>
+                        <a href="#contact" class="btn-primary">Rejoindre les
+                            cours</a>
+                    </div>
+
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Avancés & Compétition</h3>
+                        <p>
+                            Entraînements intensifs pour pratiquants confirmés,
+                            axés sur
+                            les techniques avancées, la préparation physique et
+                            la
+                            stratégie en compétition.
+                        </p>
+                        <div class="price-tag">Frais d'inscription : 5 000 F
+                            CFA</div>
+                        <div class="price-tag">Mensualité : à convenir en
+                            privé</div>
+                        <a href="#contact" class="btn-primary">Commencer
+                            l'entraînement</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Instructeurs -->
+        <section id="instructeurs" class="instructors">
+            <div class="container">
+                <h2 class="section-title">Nos Instructeurs</h2>
+                <p class="section-subtitle">
+                    Une équipe d'experts passionnés et expérimentés
+                </p>
+
+                <div class="instructor-grid">
+                    <div class="instructor-card">
+                        <div class="instructor-image">
+                            <img
+                                src="instru01.jpg"
+                                alt="Maître Carlos">
+                        </div>
+                        <h3>Maître Carlos</h3>
+                        <div class="instructor-rank">Ceinture Noire 5ème
+                            Dan</div>
+                        <p>
+                            20 ans d'expérience, formé au Brésil. Spécialiste en
+                            Jiu Jitsu traditionnel et self-défense.
+                        </p>
+                    </div>
+
+                    <div class="instructor-card">
+                        <div class="instructor-image">
+                            <img
+                                src="instru02.jpg"
+                                alt="Professor Ana">
+                        </div>
+                        <h3>Professor Ana</h3>
+                        <div class="instructor-rank">Ceinture Noire 3ème
+                            Dan</div>
+                        <p>
+                            Experte en Jiu Jitsu féminin et cours enfants.
+                            Championne régionale 2019-2021.
+                        </p>
+                    </div>
+
+                    <div class="instructor-card">
+                        <div class="instructor-image">
+                            <img
+                                src="instru03.jpg"
+                                alt="Professor Jean">
+                        </div>
+                        <h3>Professor Jean</h3>
+                        <div class="instructor-rank">Ceinture Noire 2ème
+                            Dan</div>
+                        <p>
+                            Spécialiste en préparation physique et techniques de
+                            compétition. Coach d'équipe nationale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Galerie -->
+        <section id="galerie" class="gallery">
+            <div class="container">
+                <h2 class="section-title">Galerie des Membres</h2>
+                <p class="section-subtitle">
+                    Découvrez nos membres passionnés et leurs accomplissements
+                </p>
+
+                <div class="gallery-filters">
+                    <button class="gallery-filter active"
+                        data-filter="all">Tous</button>
+                    <button class="gallery-filter" data-filter="ceinture-noire">
+                        Ceintures Noires
+                    </button>
+                    <button class="gallery-filter" data-filter="competition">
+                        Compétiteurs
+                    </button>
+                    <button class="gallery-filter" data-filter="enfant">
+                        Jeunes Membres
+                    </button>
+                    <button class="gallery-filter" data-filter="instructeur">
+                        Instructeurs
+                    </button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="ceinture-noire">
+                        <img
+                            src="gal01.jpg"
+                            alt="Marc, Ceinture Noire">
+                        <div class="gallery-info">
+                            <h3>Marc Dubois</h3>
+                            <p><i class="fas fa-award"></i> Ceinture Noire 2ème
+                                degré</p>
+                            <p><i class="fas fa-trophy"></i> Champion de France
+                                2022</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Paris,
+                                France</p>
+                            <p><i class="fas fa-calendar"></i> Membre depuis
+                                2015</p>
+                            <div class="member-badges">
+                                <span class="member-badge">Instructeur</span>
+                                <span class="member-badge">Compétiteur
+                                    Elite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="competition">
+                        <img
+                            src="gal01.jpg"
+                            alt="Sophie, Compétitrice">
+                        <div class="gallery-info">
+                            <h3>Sophie Martin</h3>
+                            <p><i class="fas fa-award"></i> Ceinture Marron</p>
+                            <p><i class="fas fa-trophy"></i> Vainqueur Open de
+                                Paris 2023</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Lyon,
+                                France</p>
+                            <p><i class="fas fa-calendar"></i> Membre depuis
+                                2018</p>
+                            <div class="member-badges">
+                                <span class="member-badge">Compétitrice</span>
+                                <span class="member-badge">Spécialiste
+                                    Garde</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="enfant">
+                        <img
+                            src="gal01.jpg"
+                            alt="Léo, Jeune membre">
+                        <div class="gallery-info">
+                            <h3>Léo Petit</h3>
+                            <p><i class="fas fa-award"></i> Ceinture Verte
+                                (Jeunes)</p>
+                            <p><i class="fas fa-trophy"></i> 2ème au championnat
+                                junior</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Versailles,
+                                France</p>
+                            <p><i class="fas fa-calendar"></i> Membre depuis
+                                2020</p>
+                            <div class="member-badges">
+                                <span class="member-badge">Jeune Espoir</span>
+                                <span class="member-badge">Future Star</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="ceinture-noire">
+                        <img
+                            src="gal01.jpg"
+                            alt="Thomas, Ceinture Noire">
+                        <div class="gallery-info">
+                            <h3>Thomas Leroy</h3>
+                            <p><i class="fas fa-award"></i> Ceinture Noire 1er
+                                degré</p>
+                            <p><i class="fas fa-trophy"></i> Professeur
+                                adjoint</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Marseille,
+                                France</p>
+                            <p><i class="fas fa-calendar"></i> Membre depuis
+                                2014</p>
+                            <div class="member-badges">
+                                <span class="member-badge">Instructeur</span>
+                                <span class="member-badge">Technicien</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="competition">
+                        <img
+                            src="gal01.jpg"
+                            alt="Julie, Compétitrice">
+                        <div class="gallery-info">
+                            <h3>Julie Moreau</h3>
+                            <p><i class="fas fa-award"></i> Ceinture Bleue</p>
+                            <p><i class="fas fa-trophy"></i> Médaille d'or IBJJF
+                                2023</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Bordeaux,
+                                France</p>
+                            <p><i class="fas fa-calendar"></i> Membre depuis
+                                2019</p>
+                            <div class="member-badges">
+                                <span class="member-badge">Compétitrice</span>
+                                <span class="member-badge">Passage de
+                                    garde</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="enfant">
+                        <img
+                            src="gal01.jpg"
+                            alt="Emma, Jeune membre">
+                        <div class="gallery-info">
+                            <h3>Emma Durand</h3>
+                            <p><i class="fas fa-award"></i> Ceinture Jaune
+                                (Jeunes)</p>
+                            <p><i class="fas fa-trophy"></i> Espoir du club
+                                2023</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Paris,
+                                France</p>
+                            <p><i class="fas fa-calendar"></i> Membre depuis
+                                2021</p>
+                            <div class="member-badges">
+                                <span class="member-badge">Jeune Espoir</span>
+                                <span class="member-badge">Persévérance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="instructeur">
+                        <img
+                            src="gal01.jpg"
+                            alt="Pierre, Instructeur">
+                        <div class="gallery-info">
+                            <h3>Pierre Lambert</h3>
+                            <p><i class="fas fa-award"></i> Ceinture Noire 3ème
+                                degré</p>
+                            <p><i class="fas fa-trophy"></i> Responsable cours
+                                adultes</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Lille,
+                                France</p>
+                            <p><i class="fas fa-calendar"></i> Membre depuis
+                                2012</p>
+                            <div class="member-badges">
+                                <span class="member-badge">Instructeur</span>
+                                <span class="member-badge">Fondateur</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="competition">
+                        <img
+                            src="gal01.jpg"
+                            alt="Céline, Compétitrice">
+                        <div class="gallery-info">
+                            <h3>Céline Roche</h3>
+                            <p><i class="fas fa-award"></i> Ceinture
+                                Violette</p>
+                            <p><i class="fas fa-trophy"></i> Championne d'Europe
+                                2022</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Toulouse,
+                                France</p>
+                            <p><i class="fas fa-calendar"></i> Membre depuis
+                                2017</p>
+                            <div class="member-badges">
+                                <span class="member-badge">Compétitrice</span>
+                                <span class="member-badge">Élite Mondiale</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Témoignages -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Ce Que Disent Nos Élèves</h2>
+                <p class="section-subtitle">Leurs témoignages authentiques</p>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Ce dojo a transformé ma vie. J'ai gagné en
+                            confiance et en discipline. L'ambiance familiale est
+                            exceptionnelle."
+                        </div>
+                        <div class="testimonial-author">
+                            <i class="fas fa-user"></i> Marie, pratiquante
+                            depuis 2 ans
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Les instructeurs sont fantastiques. Ils savent
+                            adapter leur enseignement à chaque élève. Je
+                            recommande vivement !"
+                        </div>
+                        <div class="testimonial-author">
+                            <i class="fas fa-user"></i> Thomas, ceinture bleue
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Mon fils a commencé à 8 ans. Il a développé sa
+                            concentration et son respect des autres. Merci à
+                            toute l'équipe !"
+                        </div>
+                        <div class="testimonial-author">
+                            <i class="fas fa-user"></i> Sophie, maman d'élève
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section FAQ -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">Questions Fréquentes</h2>
+                <p class="section-subtitle">
+                    Toutes les réponses à vos questions sur le Jiu Jitsu Self
+                    Défense
+                </p>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Dois-je être en forme pour commencer le Jiu
+                                Jitsu ?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Absolument pas ! Le Jiu Jitsu est accessible à
+                                tous, quel que soit votre niveau de forme
+                                physique. Nos cours
+                                débutants sont spécialement conçus pour vous
+                                permettre de
+                                progresser à votre rythme et d'améliorer votre
+                                condition physique
+                                progressivement.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Quel équipement faut-il pour commencer
+                                ?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Pour débuter, vous n'avez besoin que d'un kimono
+                                (gi) et d'une ceinture. Nous proposons des
+                                équipements de
+                                location pour vos premiers cours. Une fois que
+                                vous êtes certain
+                                de vouloir poursuivre, nous vous conseillerons
+                                sur
+                                l'équipement à acquérir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Y a-t-il un risque de blessure ?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Comme dans tout sport, il existe un risque de
+                                blessure. Cependant, le Jiu Jitsu Self Défense
+                                est conçu pour permettre
+                                à des pratiquants de niveaux différents de
+                                s'entraîner
+                                en sécurité. Nous mettons l'accent sur le
+                                contrôle, le
+                                respect du partenaire et la progression
+                                technique pour minimiser les
+                                risques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Quelle est la différence avec le Jiu Jitsu
+                                traditionnel ?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Le Jiu Jitsu Self-Défense est un art martial
+                                complet qui met
+                                l'accent sur des techniques pratiques de
+                                protection personnelle.
+                                Il combine des frappes, des projections, des
+                                contrôles
+                                articulaires et des immobilisations afin de
+                                neutraliser
+                                efficacement une agression.
+                                Accessible à tous, il développe la confiance en
+                                soi, la maîtrise
+                                du stress et la sécurité personnelle dans la vie
+                                quotidienne.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Rejoignez-Nous</h2>
+                <p class="section-subtitle">
+                    Prenez contact pour votre cours d'essai gratuit
+                </p>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>Ecole Rigobert NGOUOLALI, Makabandilou,
+                                    Congo-Brazzaville</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+242 06 967 1570</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>bison@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horaires</h4>
+                                <p>Lundi-Samedi: 15h30-18h00 - Dimanche:
+                                    7h00-09h00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d990.9596427465776!2d15.2909683!3d-4.1448414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6bcf1728e71b59%3A0x9cd4fe05bf76477d!2sEcole%20Rigobert%20NGOUOLALI!5e1!3m2!1sfr!2scg!4v1758374237399!5m2!1sfr!2scg"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3>Anakochi Bison Ouragan Ju Jitsu Self Défense</h3>
+                        <p>
+                            Découvrez un art martial authentique dans un
+                            environnement respectueux et professionnel.
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Liens Rapides</h3>
+                        <a href="#apropos">À Propos</a>
+                        <a href="#cours">Nos Cours</a>
+                        <a href="#instructeurs">Instructeurs</a>
+                        <a href="#galerie">Galerie</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Cours</h3>
+                        <a href="#contact">Jiu Jitsu Enfants</a>
+                        <a href="#contact">Débutants Adultes</a>
+                        <a href="#contact">Avancés & Compétition</a>
+                        <a href="#contact">Cours Particuliers</a>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Newsletter</h3>
+                        <p>
+                            Inscrivez-vous pour recevoir nos actualités et
+                            offres spéciales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Anakochi Bison Ouragan. Tous droits
+                        réservés.</p>
+                    <div class="footer-links">
+                        <a href="#">Mentions légales</a>
+                        <a href="#">Politique de confidentialité</a>
+                        <a href="#">Conditions générales</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to top button -->
+        <a href="#accueil" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <!-- Modal for trial class -->
+        <div class="modal" id="successModal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <h2>Merci pour votre demande !</h2>
+                <p>
+                    Nous vous contacterons très bientôt pour organiser votre
+                    cours d'essai gratuit.
+                </p>
+                <p>À très vite au dojo !</p>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        // ===== VARIABLES GLOBALES =====
+let activeGalleryItem = null;
+
+// ===== FONCTIONS UTILITAIRES =====
+function isMobileDevice() {
+    return window.matchMedia("(hover: none)").matches || 
+           /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+function addTouchFeedback(element) {
+    element.addEventListener('touchstart', function(e) {
+        this.style.transform = 'scale(0.98)';
+        this.style.opacity = '0.8';
+    });
+    
+    element.addEventListener('touchend', function(e) {
+        setTimeout(() => {
+            this.style.transform = '';
+            this.style.opacity = '';
+        }, 150);
+    });
+
+    element.addEventListener('touchcancel', function(e) {
+        this.style.transform = '';
+        this.style.opacity = '';
+    });
+}
+
+// ===== INITIALISATION DOM =====
+document.addEventListener("DOMContentLoaded", function () {
+    // ===== GESTION DU LOADER =====
+    const progressBar = document.querySelector(".loader-progress-bar");
+    if (progressBar) {
+        let progress = 0;
+        const progressInterval = setInterval(() => {
+            progress += Math.random() * 15;
+            progressBar.style.width = Math.min(progress, 100) + "%";
+
+            if (progress >= 100) {
+                clearInterval(progressInterval);
+                setTimeout(() => {
+                    document.querySelector(".loader").classList.add("hidden");
+                }, 500);
+            }
+        }, 200);
+    } else {
+        setTimeout(() => {
+            document.querySelector(".loader").classList.add("hidden");
+        }, 1000);
+    }
+
+    // ===== MENU MOBILE =====
+    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+    const navMenu = document.querySelector(".nav-menu");
+
+    mobileMenuBtn.addEventListener("click", function () {
+        this.classList.toggle("active");
+        navMenu.classList.toggle("active");
+
+        // Prévention du scroll quand le menu est ouvert
+        if (navMenu.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    });
+
+    // Fermeture du menu mobile au clic sur un lien
+    document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+            mobileMenuBtn.classList.remove("active");
+            navMenu.classList.remove("active");
+            document.body.style.overflow = "auto";
+        });
+    });
+
+    // ===== INTERACTIONS TACTILES AMÉLIORÉES =====
+    // Feedback tactile pour les éléments interactifs
+    if (isMobileDevice()) {
+        document.querySelectorAll('.btn-primary, .btn-secondary, .cta-button, .gallery-filter, .class-card, .instructor-card').forEach(addTouchFeedback);
+    }
+
+    // Prévention du scroll pour le menu mobile
+    if (isMobileDevice()) {
+        document.addEventListener('touchmove', function(e) {
+            if (navMenu.classList.contains('active') && !e.target.closest('.nav-menu')) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    }
+
+    // ===== NAVIGATION FLUIDE =====
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }
+        });
+    });
+
+    // ===== ANIMATIONS AU SCROLL =====
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+            }
+        });
+    }, observerOptions);
+
+    // Observer tous les éléments à animer
+    document
+        .querySelectorAll(
+            ".class-card, .instructor-card, .testimonial-card, .stat-item, .about-image, .accordion-item, .gallery-item"
+        )
+        .forEach((el) => {
+            observer.observe(el);
+        });
+
+    // ===== EFFETS HEADER AU SCROLL =====
+    window.addEventListener("scroll", () => {
+        const header = document.querySelector(".header");
+        const backToTop = document.querySelector(".back-to-top");
+
+        if (window.scrollY > 100) {
+            header.classList.add("scrolled");
+            backToTop.classList.add("visible");
+        } else {
+            header.classList.remove("scrolled");
+            backToTop.classList.remove("visible");
+        }
+    });
+
+    // ===== GALERIE - INTERACTIONS TACTILES AMÉLIORÉES =====
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    galleryItems.forEach((item) => {
+        // Gestion des interactions tactiles
+        item.addEventListener("touchstart", handleGalleryTouch);
+        item.addEventListener("click", handleGalleryTouch);
+
+        function handleGalleryTouch(e) {
+            e.preventDefault();
+            
+            // Si cet élément est déjà actif, le fermer
+            if (item.classList.contains("show-info")) {
+                item.classList.remove("show-info");
+                activeGalleryItem = null;
+                return;
+            }
+
+            // Fermer tout élément actuellement actif
+            if (activeGalleryItem) {
+                activeGalleryItem.classList.remove("show-info");
+            }
+
+            // Afficher les infos pour cet élément
+            item.classList.add("show-info");
+            activeGalleryItem = item;
+
+            // Masquage automatique après 5 secondes sur mobile
+            if (window.matchMedia("(hover: none)").matches) {
+                setTimeout(() => {
+                    if (item.classList.contains("show-info")) {
+                        item.classList.remove("show-info");
+                        if (activeGalleryItem === item) {
+                            activeGalleryItem = null;
+                        }
+                    }
+                }, 5000);
+            }
+        }
+    });
+
+    // Fermer les infos galerie en cliquant à l'extérieur
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".gallery-item") && activeGalleryItem) {
+            activeGalleryItem.classList.remove("show-info");
+            activeGalleryItem = null;
+        }
+    });
+
+    // ===== FILTRES GALERIE =====
+    const galleryFilters = document.querySelectorAll(".gallery-filter");
+    let galleryItemsForFilter = document.querySelectorAll(".gallery-item");
+
+    galleryFilters.forEach((filter) => {
+        filter.addEventListener("click", () => {
+            // Retirer la classe active de tous les filtres
+            galleryFilters.forEach((f) => f.classList.remove("active"));
+            // Ajouter la classe active au filtre cliqué
+            filter.classList.add("active");
+
+            const filterValue = filter.getAttribute("data-filter");
+
+            galleryItemsForFilter.forEach((item) => {
+                if (
+                    filterValue === "all" ||
+                    item.getAttribute("data-category") === filterValue
+                ) {
+                    item.style.display = "block";
+                    setTimeout(() => {
+                        item.classList.add("fade-in");
+                    }, 50);
+                } else {
+                    item.style.display = "none";
+                    item.classList.remove("fade-in", "show-info");
+                    // Fermer toute info active
+                    if (activeGalleryItem === item) {
+                        activeGalleryItem = null;
+                    }
+                }
+            });
+        });
+    });
+
+    // ===== ACCORDÉON FAQ =====
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+    accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector("i");
+
+            // Basculer l'élément actuel
+            content.classList.toggle("active");
+            icon.classList.toggle("fa-chevron-down");
+            icon.classList.toggle("fa-chevron-up");
+
+            // Fermer les autres éléments
+            accordionHeaders.forEach((otherHeader) => {
+                if (otherHeader !== header) {
+                    const otherContent = otherHeader.nextElementSibling;
+                    const otherIcon = otherHeader.querySelector("i");
+
+                    otherContent.classList.remove("active");
+                    otherIcon.classList.remove("fa-chevron-up");
+                    otherIcon.classList.add("fa-chevron-down");
+                }
+            });
+        });
+    });
+
+    // ===== COMPTEUR ANIMÉ POUR LES STATS =====
+    const counters = document.querySelectorAll(".stat-number");
+    const speed = 200;
+
+    function animateCounter() {
+        counters.forEach((counter) => {
+            const target = +counter.getAttribute("data-count");
+            const count = +counter.innerText;
+            const increment = Math.ceil(target / speed);
+
+            if (count < target) {
+                counter.innerText = Math.min(count + increment, target);
+                setTimeout(animateCounter, 1);
+            }
+        });
+    }
+
+    // Démarrer le compteur quand la section stats est visible
+    const statsSection = document.querySelector(".stats-grid");
+    const statsObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    if (statsSection) {
+        statsObserver.observe(statsSection);
+    }
+
+    // ===== FORMULAIRE DE CONTACT =====
+    const trialForm = document.getElementById("trialForm");
+    if (trialForm) {
+        trialForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+
+            // Affichage de l'état de chargement
+            submitBtn.innerHTML =
+                '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            submitBtn.disabled = true;
+
+            // Simulation d'envoi de formulaire
+            setTimeout(() => {
+                const modal = document.getElementById("successModal");
+                modal.classList.add("visible");
+                this.reset();
+
+                // Réinitialiser l'état du bouton
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+    }
+
+    // ===== GESTION MODAL =====
+    const closeModal = document.querySelector(".close-modal");
+    if (closeModal) {
+        closeModal.addEventListener("click", function () {
+            document.getElementById("successModal").classList.remove("visible");
+        });
+    }
+
+    // Fermer la modal en cliquant à l'extérieur
+    window.addEventListener("click", function (e) {
+        const modal = document.getElementById("successModal");
+        if (e.target === modal) {
+            modal.classList.remove("visible");
+        }
+    });
+
+    // ===== SWIPE TACTILE POUR LA GALERIE =====
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const gallery = document.querySelector(".gallery-grid");
+    if (gallery) {
+        gallery.addEventListener(
+            "touchstart",
+            (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            },
+            false
+        );
+
+        gallery.addEventListener(
+            "touchend",
+            (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            },
+            false
+        );
+
+        function handleSwipe() {
+            const diff = touchStartX - touchEndX;
+            const threshold = 50; // Distance minimale de swipe
+
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    // Swipe gauche - afficher le filtre suivant
+                    const activeFilter = document.querySelector(
+                        ".gallery-filter.active"
+                    );
+                    const nextFilter =
+                        activeFilter.nextElementSibling ||
+                        document.querySelector(".gallery-filter");
+                    if (nextFilter) nextFilter.click();
+                } else {
+                    // Swipe droite - afficher le filtre précédent
+                    const activeFilter = document.querySelector(
+                        ".gallery-filter.active"
+                    );
+                    const prevFilter =
+                        activeFilter.previousElementSibling ||
+                        document.querySelector(".gallery-filter:last-child");
+                    if (prevFilter) prevFilter.click();
+                }
+            }
+        }
+    }
+
+    // ===== LAZY LOADING POUR LES IMAGES =====
+    if ("IntersectionObserver" in window) {
+        const lazyImageObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.classList.remove("lazy");
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
+                });
+            }
+        );
+
+        document.querySelectorAll("img[data-src]").forEach((lazyImage) => {
+            lazyImageObserver.observe(lazyImage);
+        });
+    }
+
+    // ===== GESTION DES ERREURS =====
+    window.addEventListener('error', function(e) {
+        console.warn('Erreur détectée:', e.error);
+        // Gérer gracieusement les erreurs sans casser l'expérience
+    });
+
+    // ===== OPTIMISATIONS PERFORMANCES =====
+    // Débounce pour les événements de scroll
+    let scrollTimeout;
+    window.addEventListener("scroll", () => {
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
+        scrollTimeout = setTimeout(() => {
+            const header = document.querySelector(".header");
+            const backToTop = document.querySelector(".back-to-top");
+
+            if (window.scrollY > 100) {
+                header.classList.add("scrolled");
+                backToTop.classList.add("visible");
+            } else {
+                header.classList.remove("scrolled");
+                backToTop.classList.remove("visible");
+            }
+        }, 10);
+    });
+
+    // ===== ACCESSIBILITÉ CLAVIER =====
+    document.addEventListener('keydown', function(e) {
+        // Navigation au clavier pour la galerie
+        if (e.key === 'Escape' && activeGalleryItem) {
+            activeGalleryItem.classList.remove("show-info");
+            activeGalleryItem = null;
+        }
+        
+        // Fermer la modal avec Escape
+        if (e.key === 'Escape') {
+            const modal = document.getElementById("successModal");
+            if (modal && modal.classList.contains('visible')) {
+                modal.classList.remove("visible");
+            }
+        }
+    });
+
+    // ===== GESTION DE LA CONNEXION =====
+    // Vérification basique de la connectivité
+    window.addEventListener('online', function() {
+        console.log('Connexion rétablie');
+    });
+
+    window.addEventListener('offline', function() {
+        console.log('Connexion perdue');
+    });
+
+    // ===== FINALISATION CHARGEMENT =====
+    console.log('Site Anakochi Bison Ouragan - JavaScript chargé avec succès');
+    
+    // Précharger les images critiques
+    const criticalImages = [
+        'logo anakochi.png',
+        'bg.jpg'
+    ];
+    
+    criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+
+    // ===== ANALYTICS & TRACKING =====
+    // Tracking des interactions utilisateur (remplacer par votre solution d'analytics)
+    function trackEvent(eventName, eventData) {
+        // Exemple: gtag('event', eventName, eventData);
+        console.log('Event tracked:', eventName, eventData);
+    }
+
+    // Tracker les clics sur les CTA
+    document.querySelectorAll('.cta-button, .btn-primary').forEach(button => {
+        button.addEventListener('click', () => {
+            trackEvent('cta_click', { button_text: button.textContent.trim() });
+        });
+    });
+
+    // Tracker la soumission du formulaire
+    if (trialForm) {
+        trialForm.addEventListener('submit', () => {
+            trackEvent('form_submit', { form_type: 'trial_request' });
+        });
+    }
+});
+    </script>
+</html>
