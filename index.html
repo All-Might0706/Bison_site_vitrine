@@ -14,8 +14,8 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
         <style>
-        /* ===== VARIABLES CSS ===== */
 
+        /* ===== VARIABLES CSS ===== */
 :root {
     --primary-color: #d4af37;
     --primary-dark: #b8941f;
@@ -27,6 +27,7 @@
     --light-gray: #ddd;
     --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 /* ===== RESET & BASE STYLES ===== */
 * {
     margin: 0;
@@ -297,14 +298,6 @@ body {
     transform: scale(1.1);
 }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-    text-align: center;
-}
-
 .stat-item {
     background: var(--white);
     padding: 2rem;
@@ -399,61 +392,6 @@ body {
     font-weight: bold;
     margin: 1rem 0;
     display: inline-block;
-}
-
-/* ===== SECTION INSTRUCTEURS ===== */
-.instructors {
-    padding: 5rem 2rem;
-    background: var(--light-bg);
-}
-
-.instructor-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.instructor-card {
-    background: var(--white);
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.instructor-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.instructor-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    overflow: hidden;
-    border: 3px solid var(--primary-color);
-}
-
-.instructor-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.instructor-card h3 {
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-}
-
-.instructor-rank {
-    color: var(--primary-color);
-    font-weight: bold;
-    margin-bottom: 1rem;
 }
 
 .social-links a:hover {
@@ -728,7 +666,6 @@ body {
     }
 
     .class-card:hover,
-    .instructor-card:hover,
     .testimonial-card:hover {
         transform: none;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -926,27 +863,7 @@ body {
         padding: 0 1.5rem;
     }
 
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    .stat-item {
-        padding: 1.5rem 1rem;
-    }
-
-    .stat-number {
-        font-size: 2rem;
-    }
-
-    .classes-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 0.5rem;
-    }
-
     .class-card,
-    .instructor-card,
     .testimonial-card {
         padding: 1.5rem;
         margin-bottom: 1rem;
@@ -1062,10 +979,6 @@ body {
         font-size: 1.6rem;
     }
 
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
     .fixed-social {
         gap: 10px;
     }
@@ -1142,25 +1055,6 @@ body {
         min-height: 100vh;
         padding: 4rem 0;
     }
-}
-
-
-
-.instructor-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.instructor-card h3 {
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-}
-
-.instructor-rank {
-    color: var(--primary-color);
-    font-weight: bold;
-    margin-bottom: 1rem;
 }
 
 /* ===== SECTION GALERIE ===== */
@@ -1573,12 +1467,14 @@ body {
         <!-- Loader -->
         <div class="loader">
             <div class="loader-text">
-                <img src="logo anakochi.png" alt="Logo Anakochi">
+                <img src="logo anakochi.png" alt="Logo Anakochi" height="400" width="350">
             </div>
+            
             <div class="loader-spinner"></div>
             <div class="loader-progress">
                 <div class="loader-progress-bar"></div>
             </div>
+            <p>By All Might Dev</p>
         </div>
 
         <!-- Fixed social icons -->
@@ -1607,16 +1503,10 @@ body {
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#apropos">À Propos</a></li>
                     <li><a href="#cours">Cours</a></li>
-                    <li><a href="#instructeurs">Instructeurs</a></li>
                     <li><a href="#galerie">Galerie</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li class="mobile-cta" style="display: none">
-                        <a href="#contact" class="cta-button">Cours d'essai
-                            gratuit</a>
-                    </li>
                 </ul>
-                <a href="#contact" class="cta-button">Cours d'essai gratuit</a>
                 <div class="mobile-menu-btn">
                     <span></span>
                     <span></span>
@@ -1691,25 +1581,6 @@ body {
                         <img src="logo anakochi.png" alt="Logo Anakochi">
                     </div>
                 </div>
-
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="15">0</div>
-                        <div class="stat-label">Années d'expérience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="500">0</div>
-                        <div class="stat-label">Élèves satisfaits</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="12">0</div>
-                        <div class="stat-label">Ceintures noires</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="98">0</div>
-                        <div class="stat-label">% de recommandation</div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -1724,6 +1595,16 @@ body {
                 <div class="classes-grid">
                     <div class="class-card">
                         <div class="class-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Débutants Adultes</h3>
+                        <p>
+                            Programme d'initiation pour adultes sans expérience,
+                            offrant un apprentissage progressif des bases du Jiu
+                            Jitsu
+                            et une remise en forme accessible à tous.
+                        </p>
+                        <div class="class-icon">
                             <i class="fas fa-child"></i>
                         </div>
                         <h3>Jiu Jitsu Enfants</h3>
@@ -1734,34 +1615,6 @@ body {
                             en soi,
                             dans un cadre ludique et éducatif.
                         </p>
-                        <div class="price-tag">Frais d'inscription : 5 000 F
-                            CFA</div>
-                        <div class="price-tag">Mensualité : à convenir en
-                            privé</div>
-                        <a href="#contact" class="btn-primary">Inscrire mon
-                            enfant</a>
-                    </div>
-
-                    <div class="class-card">
-                        <div class="class-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Débutants Adultes</h3>
-                        <p>
-                            Programme d'initiation pour adultes sans expérience,
-                            offrant un apprentissage progressif des bases du Jiu
-                            Jitsu
-                            et une remise en forme accessible à tous.
-                        </p>
-                        <div class="price-tag">Frais d'inscription : 5 000 F
-                            CFA</div>
-                        <div class="price-tag">Mensualité : à convenir en
-                            privé</div>
-                        <a href="#contact" class="btn-primary">Rejoindre les
-                            cours</a>
-                    </div>
-
-                    <div class="class-card">
                         <div class="class-icon">
                             <i class="fas fa-trophy"></i>
                         </div>
@@ -1777,65 +1630,8 @@ body {
                             CFA</div>
                         <div class="price-tag">Mensualité : à convenir en
                             privé</div>
-                        <a href="#contact" class="btn-primary">Commencer
-                            l'entraînement</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section Instructeurs -->
-        <section id="instructeurs" class="instructors">
-            <div class="container">
-                <h2 class="section-title">Nos Instructeurs</h2>
-                <p class="section-subtitle">
-                    Une équipe d'experts passionnés et expérimentés
-                </p>
-
-                <div class="instructor-grid">
-                    <div class="instructor-card">
-                        <div class="instructor-image">
-                            <img
-                                src="instru01.jpg"
-                                alt="Maître Carlos">
-                        </div>
-                        <h3>Maître Carlos</h3>
-                        <div class="instructor-rank">Ceinture Noire 5ème
-                            Dan</div>
-                        <p>
-                            20 ans d'expérience, formé au Brésil. Spécialiste en
-                            Jiu Jitsu traditionnel et self-défense.
-                        </p>
-                    </div>
-
-                    <div class="instructor-card">
-                        <div class="instructor-image">
-                            <img
-                                src="instru02.jpg"
-                                alt="Professor Ana">
-                        </div>
-                        <h3>Professor Ana</h3>
-                        <div class="instructor-rank">Ceinture Noire 3ème
-                            Dan</div>
-                        <p>
-                            Experte en Jiu Jitsu féminin et cours enfants.
-                            Championne régionale 2019-2021.
-                        </p>
-                    </div>
-
-                    <div class="instructor-card">
-                        <div class="instructor-image">
-                            <img
-                                src="instru03.jpg"
-                                alt="Professor Jean">
-                        </div>
-                        <h3>Professor Jean</h3>
-                        <div class="instructor-rank">Ceinture Noire 2ème
-                            Dan</div>
-                        <p>
-                            Spécialiste en préparation physique et techniques de
-                            compétition. Coach d'équipe nationale.
-                        </p>
+                        <a href="#contact" class="btn-primary">Rejoindre les
+                            cours</a>
                     </div>
                 </div>
             </div>
@@ -2585,37 +2381,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ===== COMPTEUR ANIMÉ POUR LES STATS =====
-    const counters = document.querySelectorAll(".stat-number");
-    const speed = 200;
-
-    function animateCounter() {
-        counters.forEach((counter) => {
-            const target = +counter.getAttribute("data-count");
-            const count = +counter.innerText;
-            const increment = Math.ceil(target / speed);
-
-            if (count < target) {
-                counter.innerText = Math.min(count + increment, target);
-                setTimeout(animateCounter, 1);
-            }
-        });
-    }
-
-    // Démarrer le compteur quand la section stats est visible
-    const statsSection = document.querySelector(".stats-grid");
-    const statsObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    animateCounter();
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.5 }
-    );
-
     if (statsSection) {
         statsObserver.observe(statsSection);
     }
@@ -2824,5 +2589,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
     </script>
 </html>
-
-
