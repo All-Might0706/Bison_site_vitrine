@@ -7,7 +7,6 @@
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥋</text></svg>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -65,26 +64,10 @@
             margin-bottom: 1.5rem;
         }
 
-        .loader-progress {
-            width: 200px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 2px;
-            overflow: hidden;
-            margin-bottom: 1rem;
-        }
-
-        .loader-progress-bar {
-            height: 100%;
-            background: var(--primary-color);
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-
         .loader p {
             color: var(--white);
             font-size: 0.8rem;
-            opacity: 0.7;
+            opacity: 0.2;
         }
 
         @keyframes spin {
@@ -188,7 +171,6 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('bg.jpg') center/cover no-repeat;
@@ -962,9 +944,6 @@
             <img src="logo anakochi.png" alt="Logo Anakochi" class="w-64 md:w-80 mx-auto">
         </div>
         <div class="loader-spinner"></div>
-        <div class="loader-progress">
-            <div class="loader-progress-bar"></div>
-        </div>
         <p>By All Might Dev</p>
     </div>
 
