@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecole Bison Ouragan Club Anakochi Ju Jitsu Self Defense - Accueil</title>
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥋</text></svg>">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecole Bison Ouragan Club Anakochi Ju Jitsu Self Defense -
+            Accueil</title>
+        <link rel="icon" type="image/x-icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥋</text></svg>">
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
         :root {
             --primary-color: #d4af37;
             --primary-dark: #b8941f;
@@ -202,6 +207,51 @@
             flex-wrap: wrap;
         }
 
+        /* Compteur de visiteurs */
+.visitor-counter {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(212, 175, 55, 0.95);
+    color: var(--secondary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 98;
+    animation: slideUpFade 0.5s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.visitor-counter i {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .visitor-counter {
+        bottom: 6rem;
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
         /* Buttons */
         .btn-primary, .btn-secondary {
             display: inline-block;
@@ -369,29 +419,6 @@
             background: var(--light-bg);
         }
 
-        .gallery-filters {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-
-        .gallery-filter {
-            padding: 0.5rem 1.5rem;
-            background: var(--white);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-        }
-
-        .gallery-filter.active, .gallery-filter:hover {
-            background: var(--primary-color);
-            color: var(--secondary-color);
-        }
-
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -508,10 +535,6 @@
 
         .testimonial-author i {
             margin-right: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        .rating {
             color: var(--primary-color);
         }
 
@@ -943,548 +966,485 @@
         }
         }
     </style>
-</head>
-<body class="font-sans">
-    <!-- Loader -->
-    <div class="loader">
-        <div class="loader-text">
-            <img src="logo anakochi.png" alt="Logo Anakochi" class="w-64 md:w-80 mx-auto">
+    </head>
+    <body class="font-sans">
+        <!-- Loader -->
+        <div class="loader">
+            <div class="loader-text">
+                <img src="logo anakochi.png" alt="Logo Anakochi"
+                    class="w-64 md:w-80 mx-auto">
+            </div>
+            <div class="loader-spinner"></div>
+            <p>By All Might Dev</p>
         </div>
-        <div class="loader-spinner"></div>
-        <p>By All Might Dev</p>
-    </div>
 
-    <!-- Fixed social icons -->
-    <div class="fixed-social">
-        <a href="#" class="facebook" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="tiktok" aria-label="TikTok">
-            <i class="fab fa-tiktok"></i>
-        </a>
-        <a href="#" class="whatsapp" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="#" class="instagram" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">
-                <i class="fas fa-fist-raised"></i>Anakochi Bison O.
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À Propos</a></li>
-                <li><a href="#cours">Cours</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Section Hero -->
-    <section id="accueil" class="hero">
-        <div class="hero-content">
-            <h1 class="animate__animated animate__fadeInDown">
-                Maîtrisez l'Art du Jiu Jitsu
-            </h1>
-            <p class="animate__animated animate__fadeInUp">
-                Découvrez une discipline qui allie technique, stratégie et développement personnel dans un environnement bienveillant et professionnel.
-            </p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn-primary animate__animated animate__fadeInUp">
-                    Commencer maintenant
-                </a>
-                <a href="#cours" class="btn-secondary animate__animated animate__fadeInUp">
-                    Découvrir nos cours
-                </a>
-            </div>
+        <!-- Fixed social icons -->
+        <div class="fixed-social">
+            <a href="#" class="facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="tiktok" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="#" class="whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
-    </section>
 
-    <!-- Section À Propos -->
-    <section id="apropos" class="about">
-        <div class="container">
-            <h2 class="section-title">Pourquoi Choisir Notre Dojo ?</h2>
-            <p class="section-subtitle">
-                Une approche unique qui privilégie la technique, le respect et l'épanouissement personnel à travers l'art martial
-            </p>
-
-            <div class="about-grid">
-                <div class="about-content">
-                    <h3><i class="fas fa-medal"></i> Excellence Technique</h3>
-                    <p>
-                        Notre programme d'enseignement suit la lignée traditionnelle du Jiu Jitsu Self Défense, avec une progression structurée adaptée à tous les niveaux.
-                    </p>
-
-                    <h3><i class="fas fa-heart"></i> Environnement Bienveillant</h3>
-                    <p>
-                        Nous cultivons un esprit de famille où chaque pratiquant peut évoluer à son rythme dans le respect mutuel et l'entraide.
-                    </p>
-
-                    <h3><i class="fas fa-chart-line"></i> Développement Complet</h3>
-                    <p>
-                        Au-delà de la technique, nous développons la confiance en soi, la discipline et la gestion du stress à travers la pratique.
-                    </p>
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-fist-raised"></i>Anakochi Bison O.
                 </div>
-                <div class="about-image">
-                    <img src="logo anakochi.png" alt="Logo Anakochi" class="rounded-lg shadow-xl">
+                <ul class="nav-menu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#apropos">À Propos</a></li>
+                    <li><a href="#cours">Cours</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Section Hero -->
+        <section id="accueil" class="hero">
+            <div class="hero-content">
+                <h1 class="animate__animated animate__fadeInDown">
+                    Maîtrisez l'Art du Jiu Jitsu
+                </h1>
+                <p class="animate__animated animate__fadeInUp">
+                    Découvrez une discipline qui allie technique, stratégie et
+                    développement personnel dans un environnement bienveillant
+                    et professionnel.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact"
+                        class="btn-primary animate__animated animate__fadeInUp">
+                        Commencer maintenant
+                    </a>
+                    <a href="#cours"
+                        class="btn-secondary animate__animated animate__fadeInUp">
+                        Découvrir nos cours
+                    </a>
                 </div>
             </div>
+        </section>
+        <!-- Compteur de visiteurs -->
+        <div class="visitor-counter">
+            <i class="fas fa-users"></i>
+            <span id="visitorText">Chargement...</span>
         </div>
-    </section>
+        <!-- Section À Propos -->
+        <section id="apropos" class="about">
+            <div class="container">
+                <h2 class="section-title">Pourquoi Choisir Notre Dojo ?</h2>
+                <p class="section-subtitle">
+                    Une approche unique qui privilégie la technique, le respect
+                    et l'épanouissement personnel à travers l'art martial
+                </p>
 
-    <!-- Section Cours -->
-    <section id="cours" class="classes">
-        <div class="container">
-            <h2 class="section-title">Nos Cours</h2>
-            <p class="section-subtitle">
-                Des programmes adaptés à tous les âges et tous les niveaux
-            </p>
-
-            <div class="classes-grid">
-                <div class="class-card">
-                    <div class="class-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Débutants Adultes</h3>
-                    <p>
-                        Programme d'initiation pour adultes sans expérience, offrant un apprentissage progressif des bases du Jiu Jitsu et une remise en forme accessible à tous.
-                    </p>
-                </div>
-                
-                <div class="class-card">
-                    <div class="class-icon">
-                        <i class="fas fa-child"></i>
-                    </div>
-                    <h3>Jiu Jitsu Enfants</h3>
-                    <p>
-                        Cours destinés aux enfants de 6 à 12 ans, axés sur la motricité, la discipline, le respect et la confiance en soi, dans un cadre ludique et éducatif.
-                    </p>
-                </div>
-                
-                <div class="class-card">
-                    <div class="class-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Avancés & Compétition</h3>
-                    <p>
-                        Entraînements intensifs pour pratiquants confirmés, axés sur les techniques avancées, la préparation physique et la stratégie en compétition.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="mt-12 text-center">
-                <div class="inline-block mb-4">
-                    <div class="price-tag">Frais d'inscription : 5 000 F CFA</div>
-                    <div class="price-tag">Mensualité : à convenir en privé</div>
-                </div>
-                <div class="mt-6">
-                    <a href="#contact" class="btn-primary">Rejoindre les cours</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Galerie -->
-    <section id="galerie" class="gallery">
-        <div class="container">
-            <h2 class="section-title">Galerie des Membres</h2>
-            <p class="section-subtitle">
-                Découvrez nos membres passionnés et leurs accomplissements
-            </p>
-
-            <div class="gallery-filters">
-                <button class="gallery-filter active" data-filter="all">Tous</button>
-                <button class="gallery-filter" data-filter="ceinture-noire">
-                    Ceintures Noires
-                </button>
-                <button class="gallery-filter" data-filter="competition">
-                    Compétiteurs
-                </button>
-                <button class="gallery-filter" data-filter="enfant">
-                    Jeunes Membres
-                </button>
-                <button class="gallery-filter" data-filter="instructeur">
-                    Instructeurs
-                </button>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-item" data-category="ceinture-noire">
-                    <img src="gal01.webp" alt="Marc, Ceinture Noire">
-                    <div class="gallery-info">
-                        <h3>Marc Dubois</h3>
-                        <p><i class="fas fa-award"></i> Ceinture Noire 2ème degré</p>
-                        <p><i class="fas fa-trophy"></i> Champion de France 2022</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
-                        <p><i class="fas fa-calendar"></i> Membre depuis 2015</p>
-                        <div class="member-badges">
-                            <span class="member-badge">Instructeur</span>
-                            <span class="member-badge">Compétiteur Elite</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="competition">
-                    <img src="gal01.webp" alt="Sophie, Compétitrice">
-                    <div class="gallery-info">
-                        <h3>Sophie Martin</h3>
-                        <p><i class="fas fa-award"></i> Ceinture Marron</p>
-                        <p><i class="fas fa-trophy"></i> Vainqueur Open de Paris 2023</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Lyon, France</p>
-                        <p><i class="fas fa-calendar"></i> Membre depuis 2018</p>
-                        <div class="member-badges">
-                            <span class="member-badge">Compétitrice</span>
-                            <span class="member-badge">Spécialiste Garde</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="enfant">
-                    <img src="gal01.jpg" alt="Léo, Jeune membre">
-                    <div class="gallery-info">
-                        <h3>Léo Petit</h3>
-                        <p><i class="fas fa-award"></i> Ceinture Verte (Jeunes)</p>
-                        <p><i class="fas fa-trophy"></i> 2ème au championnat junior</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Versailles, France</p>
-                        <p><i class="fas fa-calendar"></i> Membre depuis 2020</p>
-                        <div class="member-badges">
-                            <span class="member-badge">Jeune Espoir</span>
-                            <span class="member-badge">Future Star</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="ceinture-noire">
-                    <img src="gal01.webp" alt="Thomas, Ceinture Noire">
-                    <div class="gallery-info">
-                        <h3>Thomas Leroy</h3>
-                        <p><i class="fas fa-award"></i> Ceinture Noire 1er degré</p>
-                        <p><i class="fas fa-trophy"></i> Professeur adjoint</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Marseille, France</p>
-                        <p><i class="fas fa-calendar"></i> Membre depuis 2014</p>
-                        <div class="member-badges">
-                            <span class="member-badge">Instructeur</span>
-                            <span class="member-badge">Technicien</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="competition">
-                    <img src="gal01.webp" alt="Julie, Compétitrice">
-                    <div class="gallery-info">
-                        <h3>Julie Moreau</h3>
-                        <p><i class="fas fa-award"></i> Ceinture Bleue</p>
-                        <p><i class="fas fa-trophy"></i> Médaille d'or IBJJF 2023</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Bordeaux, France</p>
-                        <p><i class="fas fa-calendar"></i> Membre depuis 2019</p>
-                        <div class="member-badges">
-                            <span class="member-badge">Compétitrice</span>
-                            <span class="member-badge">Passage de garde</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="enfant">
-                    <img src="gal01.webp" alt="Emma, Jeune membre">
-                    <div class="gallery-info">
-                        <h3>Emma Durand</h3>
-                        <p><i class="fas fa-award"></i> Ceinture Jaune (Jeunes)</p>
-                        <p><i class="fas fa-trophy"></i> Espoir du club 2023</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
-                        <p><i class="fas fa-calendar"></i> Membre depuis 2021</p>
-                        <div class="member-badges">
-                            <span class="member-badge">Jeune Espoir</span>
-                            <span class="member-badge">Persévérance</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="instructeur">
-                    <img src="gal01.webp" alt="Pierre, Instructeur">
-                    <div class="gallery-info">
-                        <h3>Pierre Lambert</h3>
-                        <p><i class="fas fa-award"></i> Ceinture Noire 3ème degré</p>
-                        <p><i class="fas fa-trophy"></i> Responsable cours adultes</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Lille, France</p>
-                        <p><i class="fas fa-calendar"></i> Membre depuis 2012</p>
-                        <div class="member-badges">
-                            <span class="member-badge">Instructeur</span>
-                            <span class="member-badge">Fondateur</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="competition">
-                    <img src="gal01.webp" alt="Céline, Compétitrice">
-                    <div class="gallery-info">
-                        <h3>Céline Roche</h3>
-                        <p><i class="fas fa-award"></i> Ceinture Violette</p>
-                        <p><i class="fas fa-trophy"></i> Championne d'Europe 2022</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Toulouse, France</p>
-                        <p><i class="fas fa-calendar"></i> Membre depuis 2017</p>
-                        <div class="member-badges">
-                            <span class="member-badge">Compétitrice</span>
-                            <span class="member-badge">Élite Mondiale</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Témoignages -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Ce Que Disent Nos Élèves</h2>
-            <p class="section-subtitle">Leurs témoignages authentiques</p>
-
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Ce dojo a transformé ma vie. J'ai gagné en confiance et en discipline. L'ambiance familiale est exceptionnelle."
-                    </div>
-                    <div class="testimonial-author">
-                        <i class="fas fa-user"></i> Marie, pratiquante depuis 2 ans
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Les instructeurs sont fantastiques. Ils savent adapter leur enseignement à chaque élève. Je recommande vivement !"
-                    </div>
-                    <div class="testimonial-author">
-                        <i class="fas fa-user"></i> Thomas, ceinture bleue
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Mon fils a commencé à 8 ans. Il a développé sa concentration et son respect des autres. Merci à toute l'équipe !"
-                    </div>
-                    <div class="testimonial-author">
-                        <i class="fas fa-user"></i> Sophie, maman d'élève
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section FAQ -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2 class="section-title">Questions Fréquentes</h2>
-            <p class="section-subtitle">
-                Toutes les réponses à vos questions sur le Jiu Jitsu Self Défense
-            </p>
-
-            <div class="accordion">
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Dois-je être en forme pour commencer le Jiu Jitsu ?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h3><i class="fas fa-medal"></i> Excellence
+                            Technique</h3>
                         <p>
-                            Absolument pas ! Le Jiu Jitsu est accessible à tous, quel que soit votre niveau de forme physique. Nos cours débutants sont spécialement conçus pour vous permettre de progresser à votre rythme et d'améliorer votre condition physique progressivement.
+                            Notre programme d'enseignement suit la lignée
+                            traditionnelle du Jiu Jitsu Self Défense, avec une
+                            progression structurée adaptée à tous les niveaux.
+                        </p>
+
+                        <h3><i class="fas fa-heart"></i> Environnement
+                            Bienveillant</h3>
+                        <p>
+                            Nous cultivons un esprit de famille où chaque
+                            pratiquant peut évoluer à son rythme dans le respect
+                            mutuel et l'entraide.
+                        </p>
+
+                        <h3><i class="fas fa-chart-line"></i> Développement
+                            Complet</h3>
+                        <p>
+                            Au-delà de la technique, nous développons la
+                            confiance en soi, la discipline et la gestion du
+                            stress à travers la pratique.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="logo anakochi.png" alt="Logo Anakochi"
+                            class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Cours -->
+        <section id="cours" class="classes">
+            <div class="container">
+                <h2 class="section-title">Nos Cours</h2>
+                <p class="section-subtitle">
+                    Des programmes adaptés à tous les âges et tous les niveaux
+                </p>
+
+                <div class="classes-grid">
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Débutants Adultes</h3>
+                        <p>
+                            Programme d'initiation pour adultes sans expérience,
+                            offrant un apprentissage progressif des bases du Jiu
+                            Jitsu et une remise en forme accessible à tous.
+                        </p>
+                    </div>
+
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3>Jiu Jitsu Enfants</h3>
+                        <p>
+                            Cours destinés aux enfants de 6 à 12 ans, axés sur
+                            la motricité, la discipline, le respect et la
+                            confiance en soi, dans un cadre ludique et éducatif.
+                        </p>
+                    </div>
+
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Avancés & Compétition</h3>
+                        <p>
+                            Entraînements intensifs pour pratiquants confirmés,
+                            axés sur les techniques avancées, la préparation
+                            physique et la stratégie en compétition.
                         </p>
                     </div>
                 </div>
 
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Quel équipement faut-il pour commencer ?</span>
-                        <i class="fas fa-chevron-down"></i>
+                <div class="mt-12 text-center">
+                    <div class="inline-block mb-4">
+                        <div class="price-tag">Frais d'inscription : 5 000 F
+                            CFA</div>
+                        <div class="price-tag">Mensualité : à convenir en
+                            privé</div>
                     </div>
-                    <div class="accordion-content">
+                    <div class="mt-6">
+                        <a href="#contact" class="btn-primary">Rejoindre les
+                            cours</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Galerie -->
+        <section id="galerie" class="gallery">
+            <div class="container">
+                <h2 class="section-title">Galerie des Membres</h2>
+                <p class="section-subtitle">
+                    Découvrez nos membres passionnés et leurs accomplissements
+                </p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="ceinture-noire">
+                        <img src="gal01.webp" alt="Marc, Ceinture Noire">
+                        <div class="gallery-info">
+                            <h3>Marc Dubois</h3>
+                            <p><i class="fas fa-award"></i> Ceinture Noire 2ème
+                                degré</p>
+                            <p><i class="fas fa-trophy"></i> Champion de France
+                                2022</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Paris,
+                                France</p>
+                            <p><i class="fas fa-calendar"></i> Membre depuis
+                                2015</p>
+                            <div class="member-badges">
+                                <span class="member-badge">Instructeur</span>
+                                <span class="member-badge">Compétiteur
+                                    Elite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="ceinture-noire">
+                        <img src="gal01.webp" alt="Thomas, Ceinture Noire">
+                        <div class="gallery-info">
+                            <h3>Thomas Leroy</h3>
+                            <p><i class="fas fa-award"></i> Ceinture Noire 1er
+                                degré</p>
+                            <p><i class="fas fa-trophy"></i> Professeur
+                                adjoint</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Marseille,
+                                France</p>
+                            <p><i class="fas fa-calendar"></i> Membre depuis
+                                2014</p>
+                            <div class="member-badges">
+                                <span class="member-badge">Instructeur</span>
+                                <span class="member-badge">Technicien</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Témoignages -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Ce Que Disent Nos Élèves</h2>
+                <p class="section-subtitle">Leurs témoignages authentiques</p>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Ce dojo a transformé ma vie. J'ai gagné en confiance et en discipline. L'ambiance familiale est exceptionnelle."
+                        </div>
+                        <div class="testimonial-author">
+                            <i class="fas fa-user"></i> Marie, pratiquante
+                            depuis 2 ans
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Les instructeurs sont fantastiques. Ils savent adapter leur enseignement à chaque élève. Je recommande vivement !"
+                        </div>
+                        <div class="testimonial-author">
+                            <i class="fas fa-user"></i> Thomas, ceinture bleue
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section FAQ -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">Questions Fréquentes</h2>
+                <p class="section-subtitle">
+                    Toutes les réponses à vos questions sur le Jiu Jitsu Self
+                    Défense
+                </p>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Dois-je être en forme pour commencer le Jiu
+                                Jitsu ?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Absolument pas ! Le Jiu Jitsu est accessible à
+                                tous, quel que soit votre niveau de forme
+                                physique. Nos cours débutants sont spécialement
+                                conçus pour vous permettre de progresser à votre
+                                rythme et d'améliorer votre condition physique
+                                progressivement.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Quel équipement faut-il pour commencer
+                                ?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Pour débuter, vous n'avez besoin que d'un kimono
+                                (gi) et d'une ceinture. Nous proposons des
+                                équipements de location pour vos premiers cours.
+                                Une fois que vous êtes certain de vouloir
+                                poursuivre, nous vous conseillerons sur
+                                l'équipement à acquérir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Y a-t-il un risque de blessure ?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Comme dans tout sport, il existe un risque de
+                                blessure. Cependant, le Jiu Jitsu Self Défense
+                                est conçu pour permettre à des pratiquants de
+                                niveaux différents de s'entraîner en sécurité.
+                                Nous mettons l'accent sur le contrôle, le
+                                respect du partenaire et la progression
+                                technique pour minimiser les risques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Quelle est la différence avec le Jiu Jitsu
+                                traditionnel ?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Le Jiu Jitsu Self-Défense est un art martial
+                                complet qui met l'accent sur des techniques
+                                pratiques de protection personnelle. Il combine
+                                des frappes, des projections, des contrôles
+                                articulaires et des immobilisations afin de
+                                neutraliser efficacement une agression.
+                                Accessible à tous, il développe la confiance en
+                                soi, la maîtrise du stress et la sécurité
+                                personnelle dans la vie quotidienne.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Rejoignez-Nous</h2>
+                <p class="section-subtitle">
+                    Prenez contact pour votre cours d'essai gratuit
+                </p>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>Ecole Rigobert NGOUOLALI, Makabandilou,
+                                    Congo-Brazzaville</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+242 06 967 1570</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>bison@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horaires</h4>
+                                <p>Lundi-Samedi: 15h30-18h00 - Dimanche:
+                                    7h00-09h00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container mt-12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d990.9596427465776!2d15.2909683!3d-4.1448414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6bcf1728e71b59%3A0x9cd4fe05bf76477d!2sEcole%20Rigobert%20NGOUOLALI!5e1!3m2!1sfr!2scg!4v1758374237399!5m2!1sfr!2scg"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3>Anakochi Bison Ouragan Ju Jitsu Self Défense</h3>
                         <p>
-                            Pour débuter, vous n'avez besoin que d'un kimono (gi) et d'une ceinture. Nous proposons des équipements de location pour vos premiers cours. Une fois que vous êtes certain de vouloir poursuivre, nous vous conseillerons sur l'équipement à acquérir.
+                            Découvrez un art martial authentique dans un
+                            environnement respectueux et professionnel.
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Liens Rapides</h3>
+                        <a href="#apropos">À Propos</a>
+                        <a href="#cours">Nos Cours</a>
+                        <a href="#instructeurs">Instructeurs</a>
+                        <a href="#galerie">Galerie</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Cours</h3>
+                        <a href="#contact">Jiu Jitsu Enfants</a>
+                        <a href="#contact">Débutants Adultes</a>
+                        <a href="#contact">Avancés & Compétition</a>
+                        <a href="#contact">Cours Particuliers</a>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Newsletter</h3>
+                        <p>
+                            Inscrivez-vous pour recevoir nos actualités et
+                            offres spéciales.
                         </p>
                     </div>
                 </div>
 
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Y a-t-il un risque de blessure ?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>
-                            Comme dans tout sport, il existe un risque de blessure. Cependant, le Jiu Jitsu Self Défense est conçu pour permettre à des pratiquants de niveaux différents de s'entraîner en sécurité. Nous mettons l'accent sur le contrôle, le respect du partenaire et la progression technique pour minimiser les risques.
-                        </p>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Anakochi Bison Ouragan. Tous droits
+                        réservés.</p>
+                    <div class="footer-links">
+                        <a href="#">Mentions légales</a>
+                        <a href="#">Politique de confidentialité</a>
+                        <a href="#">Conditions générales</a>
                     </div>
                 </div>
+            </div>
+        </footer>
 
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Quelle est la différence avec le Jiu Jitsu traditionnel ?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>
-                            Le Jiu Jitsu Self-Défense est un art martial complet qui met l'accent sur des techniques pratiques de protection personnelle. Il combine des frappes, des projections, des contrôles articulaires et des immobilisations afin de neutraliser efficacement une agression. Accessible à tous, il développe la confiance en soi, la maîtrise du stress et la sécurité personnelle dans la vie quotidienne.
-                        </p>
-                    </div>
-                </div>
+        <!-- Back to top button -->
+        <a href="#accueil" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <!-- Modal for trial class -->
+        <div class="modal" id="successModal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <h2>Merci pour votre demande !</h2>
+                <p>
+                    Nous vous contacterons très bientôt pour organiser votre
+                    cours d'essai gratuit.
+                </p>
+                <p>À très vite au dojo !</p>
             </div>
         </div>
-    </section>
 
-    <!-- Section Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Rejoignez-Nous</h2>
-            <p class="section-subtitle">
-                Prenez contact pour votre cours d'essai gratuit
-            </p>
-
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Adresse</h4>
-                            <p>Ecole Rigobert NGOUOLALI, Makabandilou, Congo-Brazzaville</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Téléphone</h4>
-                            <p>+242 06 967 1570</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>bison@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Horaires</h4>
-                            <p>Lundi-Samedi: 15h30-18h00 - Dimanche: 7h00-09h00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map-container mt-12">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d990.9596427465776!2d15.2909683!3d-4.1448414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6bcf1728e71b59%3A0x9cd4fe05bf76477d!2sEcole%20Rigobert%20NGOUOLALI!5e1!3m2!1sfr!2scg!4v1758374237399!5m2!1sfr!2scg"
-                    width="600"
-                    height="450"
-                    style="border: 0"
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>Anakochi Bison Ouragan Ju Jitsu Self Défense</h3>
-                    <p>
-                        Découvrez un art martial authentique dans un environnement respectueux et professionnel.
-                    </p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Liens Rapides</h3>
-                    <a href="#apropos">À Propos</a>
-                    <a href="#cours">Nos Cours</a>
-                    <a href="#instructeurs">Instructeurs</a>
-                    <a href="#galerie">Galerie</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact">Contact</a>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Cours</h3>
-                    <a href="#contact">Jiu Jitsu Enfants</a>
-                    <a href="#contact">Débutants Adultes</a>
-                    <a href="#contact">Avancés & Compétition</a>
-                    <a href="#contact">Cours Particuliers</a>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Newsletter</h3>
-                    <p>
-                        Inscrivez-vous pour recevoir nos actualités et offres spéciales.
-                    </p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 Anakochi Bison Ouragan. Tous droits réservés.</p>
-                <div class="footer-links">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Politique de confidentialité</a>
-                    <a href="#">Conditions générales</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to top button -->
-    <a href="#accueil" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- Modal for trial class -->
-    <div class="modal" id="successModal">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <h2>Merci pour votre demande !</h2>
-            <p>
-                Nous vous contacterons très bientôt pour organiser votre cours d'essai gratuit.
-            </p>
-            <p>À très vite au dojo !</p>
-        </div>
-    </div>
-
-    <script>
+        <script>
         // ===== VARIABLES GLOBALES =====
         let activeGalleryItem = null;
 
@@ -1676,40 +1636,6 @@
                 }
             });
 
-            // ===== FILTRES GALERIE =====
-            const galleryFilters = document.querySelectorAll(".gallery-filter");
-            let galleryItemsForFilter = document.querySelectorAll(".gallery-item");
-
-            galleryFilters.forEach((filter) => {
-                filter.addEventListener("click", () => {
-                    // Retirer la classe active de tous les filtres
-                    galleryFilters.forEach((f) => f.classList.remove("active"));
-                    // Ajouter la classe active au filtre cliqué
-                    filter.classList.add("active");
-
-                    const filterValue = filter.getAttribute("data-filter");
-
-                    galleryItemsForFilter.forEach((item) => {
-                        if (
-                            filterValue === "all" ||
-                            item.getAttribute("data-category") === filterValue
-                        ) {
-                            item.style.display = "block";
-                            setTimeout(() => {
-                                item.classList.add("fade-in");
-                            }, 50);
-                        } else {
-                            item.style.display = "none";
-                            item.classList.remove("fade-in", "show-info");
-                            // Fermer toute info active
-                            if (activeGalleryItem === item) {
-                                activeGalleryItem = null;
-                            }
-                        }
-                    });
-                });
-            });
-
             // ===== ACCORDÉON FAQ =====
             const accordionHeaders = document.querySelectorAll(".accordion-header");
 
@@ -1736,32 +1662,6 @@
                     });
                 });
             });
-
-            // ===== FORMULAIRE DE CONTACT =====
-            const trialForm = document.getElementById("trialForm");
-            if (trialForm) {
-                trialForm.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    const submitBtn = this.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.textContent;
-
-                    // Affichage de l'état de chargement
-                    submitBtn.innerHTML =
-                        '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
-                    submitBtn.disabled = true;
-
-                    // Simulation d'envoi de formulaire
-                    setTimeout(() => {
-                        const modal = document.getElementById("successModal");
-                        modal.classList.add("visible");
-                        this.reset();
-
-                        // Réinitialiser l'état du bouton
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                    }, 1500);
-                });
-            }
 
             // ===== GESTION MODAL =====
             const closeModal = document.querySelector(".close-modal");
@@ -1877,36 +1777,6 @@
                 }, 10);
             });
 
-            // ===== ACCESSIBILITÉ CLAVIER =====
-            document.addEventListener('keydown', function(e) {
-                // Navigation au clavier pour la galerie
-                if (e.key === 'Escape' && activeGalleryItem) {
-                    activeGalleryItem.classList.remove("show-info");
-                    activeGalleryItem = null;
-                }
-                
-                // Fermer la modal avec Escape
-                if (e.key === 'Escape') {
-                    const modal = document.getElementById("successModal");
-                    if (modal && modal.classList.contains('visible')) {
-                        modal.classList.remove("visible");
-                    }
-                }
-            });
-
-            // ===== GESTION DE LA CONNEXION =====
-            // Vérification basique de la connectivité
-            window.addEventListener('online', function() {
-                console.log('Connexion rétablie');
-            });
-
-            window.addEventListener('offline', function() {
-                console.log('Connexion perdue');
-            });
-
-            // ===== FINALISATION CHARGEMENT =====
-            console.log('Site Anakochi Bison Ouragan - JavaScript chargé avec succès');
-            
             // Précharger les images critiques
             const criticalImages = [
                 'logo anakochi.png',
@@ -1918,27 +1788,40 @@
                 img.src = src;
             });
 
-            // ===== ANALYTICS & TRACKING =====
-            // Tracking des interactions utilisateur (remplacer par votre solution d'analytics)
-            function trackEvent(eventName, eventData) {
-                // Exemple: gtag('event', eventName, eventData);
-                console.log('Event tracked:', eventName, eventData);
-            }
+            // ===== COMPTEUR DE VISITEURS =====
+function initVisitorCounter() {
+    const COUNTER_KEY = 'anakochi_visitor_count';
+    const VISITOR_KEY = 'anakochi_has_visited';
+    
+    // Récupérer le compte actuel
+    let visitorCount = parseInt(localStorage.getItem(COUNTER_KEY)) || 0;
+    
+    // Vérifier si c'est une nouvelle visite
+    const hasVisited = sessionStorage.getItem(VISITOR_KEY);
+    
+    if (!hasVisited) {
+        // Incrémenter le compteur pour un nouveau visiteur
+        visitorCount++;
+        localStorage.setItem(COUNTER_KEY, visitorCount);
+        sessionStorage.setItem(VISITOR_KEY, 'true');
+    }
+    
+    // Afficher le message
+    const visitorText = document.getElementById('visitorText');
+    if (visitorText) {
+        if (visitorCount === 1) {
+            visitorText.textContent = `Vous êtes le 1er visiteur de ce site`;
+        } else if (visitorCount === 2) {
+            visitorText.textContent = `Vous êtes la 2ème personne à visiter ce site`;
+        } else {
+            visitorText.textContent = `Vous êtes le ${visitorCount}ème visiteur de ce site`;
+        }
+    }
+}
 
-            // Tracker les clics sur les CTA
-            document.querySelectorAll('.cta-button, .btn-primary').forEach(button => {
-                button.addEventListener('click', () => {
-                    trackEvent('cta_click', { button_text: button.textContent.trim() });
-                });
-            });
-
-            // Tracker la soumission du formulaire
-            if (trialForm) {
-                trialForm.addEventListener('submit', () => {
-                    trackEvent('form_submit', { form_type: 'trial_request' });
-                });
-            }
+// Appeler la fonction au chargement
+initVisitorCounter();
         });
     </script>
-</body>
+    </body>
 </html>
