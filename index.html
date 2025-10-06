@@ -207,51 +207,6 @@
             flex-wrap: wrap;
         }
 
-        /* Compteur de visiteurs */
-.visitor-counter {
-    position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(212, 175, 55, 0.95);
-    color: var(--secondary-color);
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    font-size: 0.9rem;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    z-index: 98;
-    animation: slideUpFade 0.5s ease forwards;
-    animation-delay: 1.5s;
-    opacity: 0;
-}
-
-@keyframes slideUpFade {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-.visitor-counter i {
-    font-size: 1.1rem;
-}
-
-@media (max-width: 768px) {
-    .visitor-counter {
-        bottom: 6rem;
-        font-size: 0.85rem;
-        padding: 0.6rem 1.2rem;
-    }
-}
-
         /* Buttons */
         .btn-primary, .btn-secondary {
             display: inline-block;
@@ -1015,7 +970,7 @@
                 </div>
             </nav>
         </header>
-        
+
         <!-- Section Hero -->
         <section id="accueil" class="hero">
             <div class="hero-content">
@@ -1039,6 +994,7 @@
                 </div>
             </div>
         </section>
+        
         <!-- Section À Propos -->
         <section id="apropos" class="about">
             <div class="container">
