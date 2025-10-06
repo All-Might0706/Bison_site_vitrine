@@ -965,6 +965,50 @@
             transition: var(--transition);
         }
         }
+            /* Compteur de visiteurs */
+.visitor-counter {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(212, 175, 55, 0.95);
+    color: var(--secondary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 98;
+    animation: slideUpFade 0.5s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.visitor-counter i {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .visitor-counter {
+        bottom: 6rem;
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
     </style>
     </head>
     <body class="font-sans">
@@ -1015,7 +1059,11 @@
                 </div>
             </nav>
         </header>
-
+<!-- Compteur de visiteurs -->
+<div class="visitor-counter">
+    <i class="fas fa-users"></i>
+    <span id="visitorText">Chargement...</span>
+</div>
         <!-- Section Hero -->
         <section id="accueil" class="hero">
             <div class="hero-content">
@@ -1782,7 +1830,38 @@
                 const img = new Image();
                 img.src = src;
             });
+
+            // ===== COMPTEUR DE VISITEURS GLOBAL =====
+async function initVisitorCounter() {
+    const visitorText = document.getElementById('visitorText');
+    
+    try {
+        // Compteur spécifique pour votre site GitHub
+        const response = await fetch('https://api.countapi.xyz/hit/all-might0706.github.io/bison-site-vitrine');
+        const data = await response.json();
+        
+        if (visitorText && data.value) {
+            const count = data.value;
+            if (count === 1) {
+                visitorText.textContent = `Vous êtes le 1er visiteur de ce site`;
+            } else if (count === 2) {
+                visitorText.textContent = `Vous êtes la 2ème personne à visiter ce site`;
+            } else {
+                visitorText.textContent = `Vous êtes le ${count.toLocaleString('fr-FR')}ème visiteur`;
+            }
+        }
+    } catch (error) {
+        console.warn('Erreur compteur:', error);
+        if (visitorText) {
+            visitorText.textContent = 'Bienvenue sur notre site';
+        }
+    }
+}
+
+// Appeler la fonction au chargement
+initVisitorCounter();
         });
     </script>
     </body>
 </html>
+
